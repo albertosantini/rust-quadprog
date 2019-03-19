@@ -1,4 +1,5 @@
 # QUADPROG
+[![Build Status](https://travis-ci.com/albertosantini/rust-quadprog.svg)](https://travis-ci.com/albertosantini/rust-quadprog)
 
 ## Working in Progress. Not usable yet.
 
