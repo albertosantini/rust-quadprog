@@ -17,7 +17,15 @@ mod tests {
 
     #[test]
     fn it_works_dpofa() {
-        assert_eq!(0, dpofa::dpofa(&vec![1.0, 2.0, 3.0], 1, 3));
+        let a = &mut vec![0.0, 2.0, 0.0, 0.0, 2.0];
+        let info = dpofa::dpofa(a, 2, 2);
+
+        assert_eq!(0, info);
+        assert_eq!(0.0, a[0]);
+        assert_eq!(1.4142135623730951, a[1]);
+        assert_eq!(0.0, a[2]);
+        assert_eq!(0.0, a[3]);
+        assert_eq!(1.4142135623730951, a[4]);
     }
 
     #[bench]
@@ -27,6 +35,8 @@ mod tests {
 
     #[bench]
     fn bench_dpofa(b: &mut Bencher) {
-        b.iter(|| dpofa::dpofa(&vec![1.0, 2.0, 3.0], 1, 3));
+        let a = &mut vec![0.0, 2.0, 0.0, 0.0, 2.0];
+
+        b.iter(|| dpofa::dpofa(a, 2, 2));
     }
 }
