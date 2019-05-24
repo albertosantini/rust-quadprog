@@ -25,6 +25,6 @@ pub fn solve_qp() -> Answer {
         unconstrained_solution: vec![7.0, 8.0, 9.0],
         iterations: vec![10.0, 11.0, 12.0],
         iact: 11,
-        message: format!("Hello, world!"),
+        message: "Hello, world!".to_string(),
     }
 }
