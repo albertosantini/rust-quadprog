@@ -32,7 +32,7 @@ pub fn dpofa(a: &mut Vec<f64>, lda: usize, n: usize) -> usize {
     let mut s: f64;
     let mut info = 0;
 
-    for j in 1..n + 1 {
+    for j in 1..=n {
         info = j;
         s = 0.0;
         jm1 = j - 1;
@@ -40,7 +40,7 @@ pub fn dpofa(a: &mut Vec<f64>, lda: usize, n: usize) -> usize {
         if jm1 < 1 {
             s = a[j * j] - s;
         } else {
-            for k in 1..jm1 + 1 {
+            for k in 1..=jm1 {
                 // t = a[k][j] - ddot(k - 1, a[1][k], 1, a[1][j], 1);
                 t = a[k * j];
                 for i in 1..k {
