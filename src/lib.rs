@@ -4,6 +4,8 @@ extern crate test;
 
 pub mod quadprog;
 pub mod dpofa;
+pub mod dpori;
+pub mod dposl;
 
 #[cfg(test)]
 mod tests {
