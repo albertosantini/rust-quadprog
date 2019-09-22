@@ -1,5 +1,5 @@
 # QUADPROG
-[![Build Status](https://travis-ci.com/albertosantini/rust-quadprog.svg)](https://travis-ci.com/albertosantini/rust-quadprog)
+![](https://github.com/albertosantini/rust-quadprog/workflows/CI/badge.svg)
 
 ## Working in Progress. Not usable yet.
 
